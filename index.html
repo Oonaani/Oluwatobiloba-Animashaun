@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Oluwatobiloba Animashaun — Product Manager</title>
+<title>Oluwatobiloba Animashaun | Product Manager</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -244,6 +244,60 @@
   @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
   .fade-up { animation: fadeUp 0.75s ease both; }
   .d1 { animation-delay: 0.1s; } .d2 { animation-delay: 0.22s; } .d3 { animation-delay: 0.38s; } .d4 { animation-delay: 0.52s; }
+
+  /* MOBILE RESPONSIVE */
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { gap: 1.25rem; }
+    .nav-links a { font-size: 0.75rem; }
+
+    .hero {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      padding: 7rem 1.5rem 4rem;
+    }
+    .hero-photo-wrap { order: -1; max-width: 280px; }
+    .hero-photo-wrap::before { top: 1rem; left: 1rem; right: -1rem; bottom: -1rem; }
+    .hero h1 { font-size: 2.2rem; }
+
+    .numbers { grid-template-columns: 1fr 1fr; padding: 3rem 1.5rem; gap: 1.5rem; }
+    .numbers .number-item:last-child { grid-column: span 2; border-left: 2px solid var(--accent); }
+
+    .divider { margin: 0 1.5rem; }
+
+    .story-section {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      padding: 4rem 1.5rem;
+    }
+    .story-sidebar-title { position: static; font-size: 1.4rem; }
+
+    .page-section { padding: 4rem 1.5rem; }
+
+    .work-grid { grid-template-columns: 1fr; }
+    .work-card.featured { grid-column: span 1; grid-template-columns: 1fr; }
+    .work-card.featured .work-title { font-size: 1.4rem; }
+
+    .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .about-photo-col { position: static; }
+    .about-photo { max-height: 360px; object-fit: cover; }
+
+    .contact-section { padding: 4rem 1.5rem; }
+    .contact-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+    .contact-heading { font-size: 2rem; }
+
+    footer { padding: 1.5rem; flex-direction: column; gap: 0.5rem; text-align: center; }
+  }
+
+  @media (max-width: 480px) {
+    nav { padding: 1rem; }
+    .nav-links { gap: 1rem; }
+    .hero h1 { font-size: 1.9rem; }
+    .numbers { grid-template-columns: 1fr; padding: 2.5rem 1.5rem; }
+    .numbers .number-item:last-child { grid-column: span 1; }
+    .number-val { font-size: 2.2rem; }
+    .contact-heading { font-size: 1.75rem; }
+  }
 </style>
 </head>
 <body>
@@ -262,8 +316,8 @@
 <div class="hero">
   <div>
     <p class="hero-eyebrow fade-up">Product Manager · Fintech · Africa</p>
-    <h1 class="fade-up d1">Payments that <em>fit</em> the people they're meant to serve.</h1>
-    <p class="hero-bio fade-up d2">I'm Tobi. I build financial products for the African market at Flutterwave, where I've worked across consumer apps, enterprise infrastructure, and the APIs that power thousands of businesses. Six years in, the problem still excites me.</p>
+    <h1 class="fade-up d1">Products that <em>fit</em> the people they're meant to serve.</h1>
+    <p class="hero-bio fade-up d2">I'm Tobi. I started in customer operations because I wanted to understand people. I moved into product because I wanted to fix what was failing them. Seven years later, I build financial infrastructure across Africa that actually works for the people it's supposed to serve.</p>
     <div class="hero-tags fade-up d3">
       <span class="tag">Payments</span>
       <span class="tag">APIs</span>
@@ -287,15 +341,15 @@
 <div class="numbers">
   <div class="number-item">
     <div class="number-val">200K+</div>
-    <div class="number-label">Barter users grown</div>
+    <div class="number-label">Users across products shipped</div>
   </div>
   <div class="number-item">
     <div class="number-val">50+</div>
     <div class="number-label">Mentorship sessions</div>
   </div>
   <div class="number-item">
-    <div class="number-val">6 yrs</div>
-    <div class="number-label">Building at Flutterwave</div>
+    <div class="number-val">7 yrs</div>
+    <div class="number-label">In product and operations</div>
   </div>
 </div>
 
@@ -305,13 +359,13 @@
 <div class="story-section">
   <div>
     <p class="story-label">How I got here</p>
-    <h2 class="story-sidebar-title">Six years. Three product layers. One <em>throughline.</em></h2>
+    <h2 class="story-sidebar-title">From the support queue to the product team. Same <em>problem, different seat.</em></h2>
   </div>
   <div class="story-body">
-    <p>I didn't start out wanting to build payment APIs. I started by watching people struggle with the infrastructure that was supposed to help them. Slow transfers. Confusing interfaces. Tools built for a market that wasn't theirs. That frustration became a career.</p>
-    <p>At Flutterwave, I started on the consumer side. I worked on <strong>Barter</strong>, a product that needed to feel like money made sense, not money made complicated. We grew it past 200,000 users. Then came <strong>Flutterwave Mobile</strong>, a super app that pulled payments, transfers, and more into one experience people actually wanted to use.</p>
-    <p>From there, I went deeper into infrastructure. The <strong>V4 API rebuild</strong> was about making the technical layer easier for developers to work with, so they could ship faster and fail less. And <strong>Flutterwave Vouchers</strong> tackled a real gap: how do global brands accept local payment methods without rebuilding everything? We figured out a way that works for both sides.</p>
-    <p>Now I'm also building <strong>Bucklid</strong>, a platform connecting African creators and brands through escrow-backed collaboration infrastructure. Because the problems I care about aren't just in fintech. They're anywhere trust and money need to move together.</p>
+    <p>I started in customer experience and operations. Not as a stepping stone, as a genuine education. For four years I was the person users reached when something broke. I built the triage systems, set up the QA frameworks, structured how the team handled every channel from social to Trustpilot. I learned what friction actually costs people, not just in time but in trust.</p>
+    <p>When I moved into product, I brought all of that with me. My first years were in consumer fintech: <strong>Barter</strong>, a payments product built for people who needed financial tools to feel like they were made for them, then <strong>Flutterwave Mobile</strong>, the super app that came after. We crossed 200,000 users. The number was not the point. The point was whether someone in Lagos or Accra could open the app and do what they came to do without hitting a wall.</p>
+    <p>Over time I moved into infrastructure. The <strong>V4 API redesign</strong> was about the developer on the other end of our documentation: the one trying to integrate payments at midnight before a deadline. We made that easier. <strong>Flutterwave Vouchers</strong> answered a question nobody had cleanly solved: how does a global brand accept M-Pesa, Opay, or MTN MoMo without rebuilding their entire payment setup? We figured it out.</p>
+    <p>Now I am also building <strong>Bucklid</strong>, a marketplace for African creators and brands, backed by escrow and structured around goals. The problems I care about are not limited to fintech. They show up anywhere trust and money need to move together without a safety net.</p>
   </div>
 </div>
 
@@ -320,35 +374,60 @@
 <!-- WORK -->
 <section class="page-section" id="work">
   <div class="section-header">
-    <h2 class="section-title">Selected Work</h2>
-    <span class="section-count">06 projects</span>
+    <h2 class="section-title">Things I have built</h2>
+    <span class="section-count">08 projects</span>
   </div>
   <div class="work-grid">
 
-    <div class="work-card featured">
-      <div>
-        <div class="work-card-meta">
-          <span class="work-label">Flutterwave · Consumer</span>
-          <span class="work-year">2019 – 2022</span>
-        </div>
-        <h3 class="work-title" style="margin-top:0.75rem;">Barter by Flutterwave</h3>
-        <div class="work-tags" style="margin-top:0.75rem;">
-          <span class="work-tag">Super App</span>
-          <span class="work-tag">Consumer Payments</span>
-          <span class="work-tag">Mobile</span>
-        </div>
+    <div class="work-card">
+      <div class="work-card-meta">
+        <span class="work-label">Customer Experience and Operations</span>
+        <span class="work-year">2018 – 2022</span>
       </div>
-      <div class="work-right">
-        <p class="work-desc">A full rethink of Barter and the launch of Flutterwave Mobile as a consolidated payment super app. Virtual cards, transfers, bills, and savings brought into one cohesive experience. Grew the user base past 200,000 through a mix of product decisions and distribution thinking.</p>
+      <h3 class="work-title" style="margin-top:0.75rem;">CX and Operations Infrastructure</h3>
+      <p class="work-desc">Four years building the customer operations infrastructure from the inside. I designed the triage and escalation structure the team still uses today for social, email, and Trustpilot. I built the CX QA system from scratch: defining what good looked like, measuring it, and holding the team to it at scale. This is where I learned what broken actually costs people.</p>
+      <div class="work-tags">
+        <span class="work-tag">Operations</span>
+        <span class="work-tag">CX Systems</span>
+        <span class="work-tag">Quality Assurance</span>
+        <span class="work-tag">Process Design</span>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="work-card-meta">
+        <span class="work-label">Flutterwave · Consumer</span>
+        <span class="work-year">2021 – 2023</span>
+      </div>
+      <h3 class="work-title" style="margin-top:0.75rem;"><a href="https://flutterwave.com/ke/blog/send-cash-from-the-uk-usa-eu-to-nigeria-for-pick-up-with-barter" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid var(--border);">Barter by Flutterwave ↗</a></h3>
+      <p class="work-desc">A payments product built for people who needed financial tools to feel human. Virtual cards, transfers, and cross-border remittances in one place. We grew to over 200,000 users by focusing on what actually mattered to them.</p>
+      <div class="work-tags">
+        <span class="work-tag">Consumer Payments</span>
+        <span class="work-tag">Virtual Cards</span>
+        <span class="work-tag">Remittance</span>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="work-card-meta">
+        <span class="work-label">Flutterwave · Consumer</span>
+        <span class="work-year">2023 – 2024</span>
+      </div>
+      <h3 class="work-title" style="margin-top:0.75rem;">Flutterwave Mobile</h3>
+      <p class="work-desc">When Barter was sunsetted, the question became: what replaces it? Flutterwave Mobile was the answer. A super app that consolidated the full payments experience into a single product. Built to carry the consumer story forward without losing what people loved about Barter.</p>
+      <div class="work-tags">
+        <span class="work-tag">Super App</span>
+        <span class="work-tag">Consumer</span>
+        <span class="work-tag">Mobile</span>
       </div>
     </div>
 
     <div class="work-card">
       <div class="work-card-meta">
         <span class="work-label">Flutterwave · Core Infrastructure</span>
-        <span class="work-year">2022 – 2023</span>
+        <span class="work-year">2025</span>
       </div>
-      <h3 class="work-title" style="margin-top:0.75rem;">Flutterwave V4 APIs</h3>
+      <h3 class="work-title" style="margin-top:0.75rem;"><a href="https://dev.to/flutterwaveeng/introducing-the-flutterwave-v4-api-faster-safer-easier-to-integrate-2dc9" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid var(--border);">Flutterwave V4 APIs ↗</a></h3>
       <p class="work-desc">A ground-up redesign of Flutterwave's collections and payout APIs. The goal was to make the infrastructure layer easier to build on: better developer experience, cleaner documentation, and fewer reasons for transactions to break.</p>
       <div class="work-tags">
         <span class="work-tag">API Design</span>
@@ -360,7 +439,7 @@
     <div class="work-card">
       <div class="work-card-meta">
         <span class="work-label">Flutterwave · Enterprise</span>
-        <span class="work-year">2023 – 2024</span>
+        <span class="work-year">2025</span>
       </div>
       <h3 class="work-title" style="margin-top:0.75rem;">Flutterwave Vouchers</h3>
       <p class="work-desc">APMs reimagined for African realities. Global brands can now accept local payment methods without ripping out their existing setup. A product that works on both ends of the infrastructure without asking either side to compromise.</p>
@@ -388,7 +467,7 @@
     <div class="work-card">
       <div class="work-card-meta">
         <span class="work-label">Founding PM</span>
-        <span class="work-year">2024 – Present</span>
+        <span class="work-year">2026 – Present</span>
       </div>
       <h3 class="work-title" style="margin-top:0.75rem;">Bucklid</h3>
       <p class="work-desc">A marketplace built for African creators and brands. Collaboration backed by escrow and structured around goals, so both sides can work together without the usual uncertainty about who delivers and who pays.</p>
@@ -450,11 +529,11 @@
       <a href="https://adplist.org/mentors/oluwatobiloba-animashaun" target="_blank" class="about-link">Book on ADPList ↗</a>
     </div>
     <div class="about-text">
-      <p>I'm a Product Manager who has spent over six years building fintech products across Africa. I work on payments and APIs because I believe financial systems should be accessible, not intimidating. Not built for one kind of person and tolerated by everyone else.</p>
-      <p>At Flutterwave, I helped grow Barter to over 200,000 users and led the V4 API redesign that made transactions smoother for developers and users alike. I have also built enterprise solutions that help businesses embed payments into their platforms without starting from scratch.</p>
-      <p>But here is what matters most to me: seeing more women in tech. That is why I mentor across ADPList and Accelerate, with over 50 sessions and counting. I am not just building products. I am building pathways for others to find their way in.</p>
+      <p>I am a Product Manager with seven years across customer operations and product. Before I ever wrote a PRD, I was the person users reached when something broke. I built the triage structure, designed the QA system, set up how the team handled every channel at scale. I know what it feels like to be on the receiving end of a bad product. That is not a footnote in my career. It is the whole foundation.</p>
+      <p>I have built consumer apps, redesigned core APIs, and shipped enterprise payment tools. The context changes. The question stays the same: does this work for the person on the other end? Not in theory. In practice, on their phone, in their currency, in their situation.</p>
+      <p>I mentor aspiring PMs on ADPList and at Accelerate. Over 50 sessions. Most of them are women trying to figure out if there is space for them in tech. I tell them there is. Then I help them find it.</p>
       <div class="about-highlight">
-        <p>If you are an aspiring PM, especially a woman trying to break into tech on the continent, reach out. I mean that.</p>
+        <p>If you are trying to break into product, especially if you are a woman on the continent who has been told the space is not for you, reach out. I have time for that conversation.</p>
       </div>
     </div>
   </div>
@@ -464,14 +543,14 @@
 <div class="contact-section" id="contact">
   <div class="contact-inner">
     <div>
-      <h2 class="contact-heading">Let's build something <em>worth building.</em></h2>
-      <p class="contact-body">Open to PM roles, advisory conversations, and collaborations where African context is part of the brief from day one. Reach out.</p>
+      <h2 class="contact-heading">If the work sounds interesting, <em>let's talk.</em></h2>
+      <p class="contact-body">Advisory conversations, collaborations, mentorship. African context is not a nice-to-have for me, it is where I start. Send a message.</p>
     </div>
     <div class="contact-links">
-      <a href="mailto:tobilobaanimashaun@gmail.com" class="contact-link">
+      <a href="mailto:tobianni1122@gmail.com" class="contact-link">
         <div>
           <p class="contact-link-label">Email</p>
-          <p class="contact-link-val">tobilobaanimashaun@gmail.com</p>
+          <p class="contact-link-val">tobianni1122@gmail.com</p>
         </div>
         <span class="contact-link-arrow">↗</span>
       </a>
